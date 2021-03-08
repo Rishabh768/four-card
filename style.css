@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-container{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    
+    height: 90vh;
+    width: 60vw;
+    grid-gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1f 1fr 1fr 1fr ;
+    grid-template-areas: 'h h h'
+    '. c1 .'
+    'c3 c1 c2'
+    'c3 c4 c2'
+    '. c4 .'
+    ;
+   
+} 
+
+.header{
+    grid-area: h;
+    
+    display:flex ;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.header h2{
+    color:  hsl(229, 6%, 66%);
+margin-left: 80px;
+font-weight: 400;
+}
+#h2span{
+    margin-top: 10  px;
+    color:hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+#text1{
+
+    margin-top: 10px;
+    
+}
+#text2{
+    
+    margin-top: 0px;
+    margin-left: 80px;
+    
+}
+
+p{
+    margin-top: 10px;
+    color: hsl(229, 6%, 66%);
+}
+h2{
+    color: hsl(234, 12%, 34%);
+}
+img{
+    width:40px;
+    height: 40px;
+    float:right;
+    margin-top: 90px;
+    float: right;
+    margin-right: 20px;
+}
+.card1{
+    grid-area: c1;
+    border-top: 5px solid hsl(0, 78%, 62%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px hsl(234, 12%, 34%);
+    padding: 10px;
+}
+.card2{
+    grid-area: c2;
+    border-top: 5px solid  hsl(212, 86%, 64%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px hsl(234, 12%, 34%);
+    padding: 10px;
+}
+.card3{
+    grid-area: c3;
+    border-top: 5px solid hsl(180, 62%, 55%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px hsl(234, 12%, 34%);
+    padding: 10px;
+}
+.card4{
+    grid-area: c4;
+    border-top: 5px solid hsl(34, 97%, 64%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px hsl(234, 12%, 34%);
+    padding: 10px;
+}
+
+@media only  screen and (max-width:400px){
+    .card-container{
+        
+        height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'h' 
+    'c1'
+     'c2'
+      'c3' 
+       'c4';
+   }
+   
+   .header h2{
+    color:  hsl(229, 6%, 66%);
+margin-left: 0px;
+font-size: 18px;
+font-weight: 400;
+}
+
+   #text2{
+    
+    margin-top: 0px;
+    margin-left: 0px;
+    
+}
+}
